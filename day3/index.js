@@ -61,7 +61,7 @@ function addNode(base, st, val) {
     }
 }
 
-async function day2Part1(lines) {
+async function day3Part1(lines) {
     let countLines = 0;
     const countOnes = [];
     lines.forEach(line => {
@@ -92,8 +92,8 @@ async function day2Part1(lines) {
     return gamma * epsilon;
 }
 
-day2Part1(testData).then(result => console.log(`test case final result: ${result}`));
-// readFileLines().then(lines => day2Part1(lines)).then(result => console.log(`result output from file: ${result}`));
+day3Part1(testData).then(result => console.log(`test case final result: ${result}`));
+// readFileLines().then(lines => day3Part1(lines)).then(result => console.log(`result output from file: ${result}`));
 
 function findRating(node, compareFn) {
     const nextNode = compareFn(node);
@@ -123,7 +123,7 @@ function findCO2Rating(node) {
     return (node.countLeft <= node.countRight) ? node.left: node.right;
 }
 
-async function day2Part2(lines) {
+async function day3Part2(lines) {
     let countLines = 0;
     const root = new Node();
     lines.forEach(line => {
@@ -147,5 +147,5 @@ async function day2Part2(lines) {
     return oGenRating * co2Rating;
 }
 
-day2Part2(testData).then(result => console.log(`test case 2 final result: ${result}`));
-readFileLines().then(lines => day2Part2(lines)).then(result => console.log(`result output 2 from file: ${result}`));
+day3Part2(testData).then(result => console.log(`test case 2 final result: ${result}`));
+readFileLines().then(lines => day3Part2(lines)).then(result => console.log(`result output 2 from file: ${result}`));
